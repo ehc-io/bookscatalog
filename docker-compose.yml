@@ -8,10 +8,13 @@ services:
       - mongo
     depends_on:
       - "mongo"
+    networks:
+      esnet:
+        ipv4_address: 172.16.10.10
     environment:
       WAIT_HOSTS: mongo:27017
     extra_hosts:
-    - "mongodb.local:${mongodb_ip}"
+    - "mongodb.local:172.16.10.11"
     ports:
     - "3000:3000"
     
@@ -26,3 +29,13 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: admin
     ports:
     - "27017:27017"
+    networks:
+      esnet:
+        ipv4_address: 172.16.10.11
+
+networks:
+  esnet:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.16.10.0/24
