@@ -1,0 +1,12 @@
+{
+  "mongodb-ds": {
+    "host": "mongodb.local",
+    "port": 27017,
+    "url": "",
+    "database": "bookstoreappdb",
+    "password": "userapp",
+    "name": "mongodb-ds",
+    "user": "userapp",
+    "connector": "mongodb"
+  }
+}

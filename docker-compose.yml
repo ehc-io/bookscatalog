@@ -1,0 +1,28 @@
+# Use root/example as user/password credentials
+version: '3.3'
+services:
+  api:
+    build: .
+    container_name: api
+    links:
+      - mongo
+    depends_on:
+      - "mongo"
+    environment:
+      WAIT_HOSTS: mongo:27017
+    extra_hosts:
+    - "mongodb.local:${mongodb_ip}"
+    ports:
+    - "3000:3000"
+    
+  mongo:
+    image: mongo:4.0.9-xenial
+    container_name: "mongodb"
+    restart: always
+    volumes:
+    - ./data/db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+    - "27017:27017"
