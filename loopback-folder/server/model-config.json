@@ -13,7 +13,7 @@
       "./mixins"
     ]
   },
-  "full-book-catalog-model": {
+  "full_book_catalog": {
     "dataSource": "mongodb-ds",
     "public": true
   }
