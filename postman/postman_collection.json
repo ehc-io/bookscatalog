@@ -1,0 +1,515 @@
+{
+	"info": {
+		"_postman_id": "39694e61-6e5a-4bad-b0d0-77a07647ef97",
+		"name": "API Protection for Azure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ECHO API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCIsImtpZCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCJ9.eyJhdWQiOiIwMDAwMDAwMi0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC8zMGNjMzJhNC0yMDBiLTQyMmItYjc3OS0zOGU0OWJhOGRmNGUvIiwiaWF0IjoxNTU4MjI3MzQyLCJuYmYiOjE1NTgyMjczNDIsImV4cCI6MTU1ODIzMTI0MiwiYWNyIjoiMSIsImFpbyI6IkFVUUF1LzhMQUFBQTFKbjJPMWlpbjUzTHFMOERsYjFYTXhXZ0NzcGpnY2dZbVNoTEZKQ0xCc21zeWtJM3VjVlNwdzd5K1FVUmZhSDFtTmdRWjhDVXhFVFRWSVhySkRQYW1RPT0iLCJhbHRzZWNpZCI6IjU6OjEwMDMwMDAwOEQwMTc4NjciLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiMDkyM2YzODgtNmY4NC00YzNmLTk0OTMtOGRmZjBhNTViNDhiIiwiYXBwaWRhY3IiOiIxIiwiZW1haWwiOiJFLkNhc3NlYW5vQGY1LmNvbSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2RkM2RmZDJmLTZhM2ItNDBkMS05YmUwLWJmODMyN2Q4MWM1MC8iLCJpcGFkZHIiOiIxNzcuMzMuMzUuMTI0IiwibmFtZSI6IkVkdWFyZG8gQ2Fzc2Vhbm8iLCJvaWQiOiI0YzgxNmE4MS0xMDhmLTRmYWYtOTkzZS1jZTA0ZGUzODJiZmEiLCJwdWlkIjoiMTAwMzIwMDA0MDRDMTQwRSIsInNjcCI6IlVzZXIuUmVhZCIsInN1YiI6IlN4RXVnWXZUdUV0dmgxTkRMNUNoMlB6ZEUzckpmSGhlM3pQT1dlUVYtOGMiLCJ0ZW5hbnRfcmVnaW9uX3Njb3BlIjoiTkEiLCJ0aWQiOiIzMGNjMzJhNC0yMDBiLTQyMmItYjc3OS0zOGU0OWJhOGRmNGUiLCJ1bmlxdWVfbmFtZSI6IkUuQ2Fzc2Vhbm9AZjUuY29tIiwidXRpIjoiMFh2cDVvRmZQRWVsU3BERkxPSlZBQSIsInZlciI6IjEuMCJ9.gv6nfbUQXCZ5BGAsKTER2oBWWBQrkGKUOEZqYg7sMkZ96mnYdDbbmID7OyfAKRMQ1Iy7-2ko9rk1GXIVFT7DPImUobmZNUM6m99iuzOPZMJb1j2XqsK7-ivWV9aYJq2mmfSNRn1a-GAWnudbf_wUr1eqpmW87xc5i47Ev67R3O5E5Axk3wOEBQbO7gRhpFi94PNUasAArZDmUSkAgBY-YQCw76Tse_D25fSkWEaceqnpe6H0BLV_2oeLIjlpHjXlxwOxKMjsb1Oj-Qv1-vUSqCttZa2zhiTv9ns2fa15P84qBxhX-vutZVOYAYI4nfENLJMI2d1agGLns04u0NrhMQ",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "51dd8b39dcdb475a9dfd86ae140ab755",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"vehicleType\": \"train\",\r\n\t\"maxSpeed\": 125,\r\n\t\"avgSpeed\": 90,\r\n\t\"speedUnit\": \"mph\"\r\n}"
+				},
+				"url": {
+					"raw": "https://latam-api-instance-05.azure-api.net/echo/resource",
+					"protocol": "https",
+					"host": [
+						"latam-api-instance-05",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"echo",
+						"resource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ECHO API - Proxied",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "51dd8b39dcdb475a9dfd86ae140ab755"
+					},
+					{
+						"key": "Host",
+						"value": "latam-api-instance-05.azure-api.net",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://apm-gw-04.centralus.cloudapp.azure.com/echo/resource",
+					"protocol": "https",
+					"host": [
+						"apm-gw-04",
+						"centralus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"path": [
+						"echo",
+						"resource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conference  - Get Speakers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCIsImtpZCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCJ9.eyJhdWQiOiIwMDAwMDAwMi0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC8zMGNjMzJhNC0yMDBiLTQyMmItYjc3OS0zOGU0OWJhOGRmNGUvIiwiaWF0IjoxNTU4NDY1OTI3LCJuYmYiOjE1NTg0NjU5MjcsImV4cCI6MTU1ODQ2OTgyNywiYWNyIjoiMSIsImFpbyI6IkFVUUF1LzhMQUFBQSthVzVQZUgvNnp6cmNjdm9xc0VzVVpZL1FiMjVxNXVqVE5LTW5xV2VPWmtJQWdGbm5FT0tZNktqTHJsRkxKVE9aT3lsZ2pUOGFtVXlsMXA5aE1IMjdRPT0iLCJhbHRzZWNpZCI6IjU6OjEwMDMwMDAwOEQwMTc4NjciLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiMWQ5M2M4YjUtYzAzZi00MDgyLTgyODItYTJlN2U4ZDkxY2Q3IiwiYXBwaWRhY3IiOiIxIiwiZW1haWwiOiJFLkNhc3NlYW5vQGY1LmNvbSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2RkM2RmZDJmLTZhM2ItNDBkMS05YmUwLWJmODMyN2Q4MWM1MC8iLCJpcGFkZHIiOiIyMDEuMjE3LjIyMy4zNCIsIm5hbWUiOiJFZHVhcmRvIENhc3NlYW5vIiwib2lkIjoiNGM4MTZhODEtMTA4Zi00ZmFmLTk5M2UtY2UwNGRlMzgyYmZhIiwicHVpZCI6IjEwMDMyMDAwNDA0QzE0MEUiLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJTeEV1Z1l2VHVFdHZoMU5ETDVDaDJQemRFM3JKZkhoZTN6UE9XZVFWLThjIiwidGVuYW50X3JlZ2lvbl9zY29wZSI6Ik5BIiwidGlkIjoiMzBjYzMyYTQtMjAwYi00MjJiLWI3NzktMzhlNDliYThkZjRlIiwidW5pcXVlX25hbWUiOiJFLkNhc3NlYW5vQGY1LmNvbSIsInV0aSI6IlV1akgwWGVkQlVPMENBNHhoSXNDQUEiLCJ2ZXIiOiIxLjAifQ.i4r29fA5g5FUvUKHMjFz-vhR-fLL3YblO-n81Nf8YJxS-jpxeWPzc47xschNDBfdhTAKxaeVeAkz83AfTKo8vTy_vBsYx7LK8kkFtQwJdkiZBhqwD01gdegkljrw_pEsGe6sZM8rIUxdS3QhdKMBJEySz1zPMQSfHsga4Pk_mmIcXtgXD7q7peYxapVRL_6NUmVJodvNAgA2bdoPZH7LZQPOSE_pSd9Bto9IwhA869i4c9Npf01bEqYKeFwEw2PMzoxXdce3lsSRTNAt5cUpKFkoyp-FcmNVKxZhSvMdJwBlGc4k5jZPHyrN31U8XFC42Igw7NwcjrZ2-KzGk_SX7Q",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "51dd8b39dcdb475a9dfd86ae140ab755"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://latam-api-instance-05.azure-api.net/conference/speakers",
+					"protocol": "https",
+					"host": [
+						"latam-api-instance-05",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"conference",
+						"speakers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conference - Get Topics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCIsImtpZCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCJ9.eyJhdWQiOiIwMDAwMDAwMi0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC8zMGNjMzJhNC0yMDBiLTQyMmItYjc3OS0zOGU0OWJhOGRmNGUvIiwiaWF0IjoxNTU4MzQzNTQ1LCJuYmYiOjE1NTgzNDM1NDUsImV4cCI6MTU1ODM0NzQ0NSwiYWNyIjoiMSIsImFpbyI6IkFVUUF1LzhMQUFBQWFZcUsyYU5md1hwVVlJOUo1SldkQ1JkdC9lRjYxOXJ5UDhiTkxkTWh0dzFhN2dpVmpkbG9YdkYzemhsV1M4amxNV1U1b05PcUQ3bmZOODBmQWYwRkRBPT0iLCJhbHRzZWNpZCI6IjU6OjEwMDMwMDAwOEQwMTc4NjciLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiMDkyM2YzODgtNmY4NC00YzNmLTk0OTMtOGRmZjBhNTViNDhiIiwiYXBwaWRhY3IiOiIxIiwiZW1haWwiOiJFLkNhc3NlYW5vQGY1LmNvbSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2RkM2RmZDJmLTZhM2ItNDBkMS05YmUwLWJmODMyN2Q4MWM1MC8iLCJpcGFkZHIiOiIxNzcuMzMuMzUuMTI0IiwibmFtZSI6IkVkdWFyZG8gQ2Fzc2Vhbm8iLCJvaWQiOiI0YzgxNmE4MS0xMDhmLTRmYWYtOTkzZS1jZTA0ZGUzODJiZmEiLCJwdWlkIjoiMTAwMzIwMDA0MDRDMTQwRSIsInNjcCI6IlVzZXIuUmVhZCIsInN1YiI6IlN4RXVnWXZUdUV0dmgxTkRMNUNoMlB6ZEUzckpmSGhlM3pQT1dlUVYtOGMiLCJ0ZW5hbnRfcmVnaW9uX3Njb3BlIjoiTkEiLCJ0aWQiOiIzMGNjMzJhNC0yMDBiLTQyMmItYjc3OS0zOGU0OWJhOGRmNGUiLCJ1bmlxdWVfbmFtZSI6IkUuQ2Fzc2Vhbm9AZjUuY29tIiwidXRpIjoiWktNMHYzVEVjVVdUR1pIV3RhOTFBQSIsInZlciI6IjEuMCJ9.VKvjyuZFfC4184muAGSCEf24NxZFBWW0ytLvBWv7VsG-9wPNVvekkwYHTEtXIlvloaTuIyK_r66tVjJ2KhN-UBLjr09_CBbmjn2EIGSkDU0kgJIsPUhgnFj-tyd6qv39rDNOKuTnvx58zaPzLp-SelhJbYuIbb5PRrZ_8Dok4ynCw7wHSntOy7LGXrCEwgzbhz0oocKNtDWc7YyzEOZpEFaIf0sHR00adNkzHzRinCPH9g9T-lT0tDzTMBJCVHiQykCKP-VHnSSgBRBQd8QgR51P8Nbw-ZF-kbqQWNUCIx0TuAPt3C1c0oUhMgueyo3IeQdpOTqLavQKVgNOv_fZMw",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "51dd8b39dcdb475a9dfd86ae140ab755"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://latam-api-instance-05.azure-api.net/conference/topics",
+					"protocol": "https",
+					"host": [
+						"latam-api-instance-05",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"conference",
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conference - Get Speakers Proxied",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCIsImtpZCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCJ9.eyJhdWQiOiIwMDAwMDAwMi0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC8zMGNjMzJhNC0yMDBiLTQyMmItYjc3OS0zOGU0OWJhOGRmNGUvIiwiaWF0IjoxNTU4NDY1ODMzLCJuYmYiOjE1NTg0NjU4MzMsImV4cCI6MTU1ODQ2OTczMywiYWNyIjoiMSIsImFpbyI6IkFVUUF1LzhMQUFBQVFwM0lDOVh1Q3Y4SVE1UXZ3QmdtUk0xRG5jN1lGUFVQWTBUZzVwamM2OEtqUDlaenJUemMvMkZXQkpaenZKWXRKZFlyNWJyei82bnpxS01KeUd3aWRnPT0iLCJhbHRzZWNpZCI6IjU6OjEwMDMwMDAwOEQwMTc4NjciLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiMWQ5M2M4YjUtYzAzZi00MDgyLTgyODItYTJlN2U4ZDkxY2Q3IiwiYXBwaWRhY3IiOiIxIiwiZW1haWwiOiJFLkNhc3NlYW5vQGY1LmNvbSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2RkM2RmZDJmLTZhM2ItNDBkMS05YmUwLWJmODMyN2Q4MWM1MC8iLCJpcGFkZHIiOiIyMDEuMjE3LjIyMy4zNCIsIm5hbWUiOiJFZHVhcmRvIENhc3NlYW5vIiwib2lkIjoiNGM4MTZhODEtMTA4Zi00ZmFmLTk5M2UtY2UwNGRlMzgyYmZhIiwicHVpZCI6IjEwMDMyMDAwNDA0QzE0MEUiLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJTeEV1Z1l2VHVFdHZoMU5ETDVDaDJQemRFM3JKZkhoZTN6UE9XZVFWLThjIiwidGVuYW50X3JlZ2lvbl9zY29wZSI6Ik5BIiwidGlkIjoiMzBjYzMyYTQtMjAwYi00MjJiLWI3NzktMzhlNDliYThkZjRlIiwidW5pcXVlX25hbWUiOiJFLkNhc3NlYW5vQGY1LmNvbSIsInV0aSI6ImY3TkdjRXpFTUVPQUNjS1hzMGdEQUEiLCJ2ZXIiOiIxLjAifQ.yMobdsZAUVH-zxaqfymCXrPALLX2LwHagikiklpzZdDWONk30ZElQiI0WSXZMXeDH6cimuKjCuqNs5NVNH7H3mhOQMKmSvMiMTjA6IY5e6c7mTm8-B9AYccPmpRkQ9Hu95dRvS7RCSxH6nU9MhQOczebCMIsX7xwzh_hFVKytEWDQxEy7ms1lDLOMNeLvU5zKA_qB2vjwA4ZoCuSeFJoIeKxsBfZLFjNANdG0VIUmiGvcKlJkZAutHOVZ-5jUfQDIcaN3OpMvs1yk8dzfPd52KOqHglBHwrXqu21ZeZMI5133GGNLbSEZvyUaOYeFjA66Som76XoApuFg9KSE2Rphg",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "51dd8b39dcdb475a9dfd86ae140ab755"
+					},
+					{
+						"key": "Host",
+						"value": "latam-api-instance-05.azure-api.net",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://apm-gw-04.centralus.cloudapp.azure.com:3001/speakers",
+					"protocol": "https",
+					"host": [
+						"apm-gw-04",
+						"centralus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "3001",
+					"path": [
+						"speakers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bookstore - Get Book by id [Direct]",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "51dd8b39dcdb475a9dfd86ae140ab755",
+						"disabled": true
+					},
+					{
+						"key": "Host",
+						"value": "latam-api-instance-05.azure-api.net",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://lcdsoundsystems.centralus.cloudapp.azure.com:3000/api/full_book_catalogs/1",
+					"protocol": "http",
+					"host": [
+						"lcdsoundsystems",
+						"centralus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"full_book_catalogs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bookstore - Get Book by id [API Proxied]",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCIsImtpZCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCJ9.eyJhdWQiOiIwMDAwMDAwMi0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC8zMGNjMzJhNC0yMDBiLTQyMmItYjc3OS0zOGU0OWJhOGRmNGUvIiwiaWF0IjoxNTU4NDU1NTI2LCJuYmYiOjE1NTg0NTU1MjYsImV4cCI6MTU1ODQ1OTQyNiwiYWNyIjoiMSIsImFpbyI6IkFVUUF1LzhMQUFBQTVkSURsTnFjRzBVWStMZ0NWZmxmNkQwL1RQcWYzaWI3MS9xWVVvYjN1OUo5OGJxcTkwMjhnL2RZZUZxK09jY3NNdU1mRmhEUHF2Y3hIM1NhZTdpS3FBPT0iLCJhbHRzZWNpZCI6IjU6OjEwMDMwMDAwOEQwMTc4NjciLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiMWQ5M2M4YjUtYzAzZi00MDgyLTgyODItYTJlN2U4ZDkxY2Q3IiwiYXBwaWRhY3IiOiIxIiwiZW1haWwiOiJFLkNhc3NlYW5vQGY1LmNvbSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2RkM2RmZDJmLTZhM2ItNDBkMS05YmUwLWJmODMyN2Q4MWM1MC8iLCJpcGFkZHIiOiIyMDEuMjE3LjIyMy4zNCIsIm5hbWUiOiJFZHVhcmRvIENhc3NlYW5vIiwib2lkIjoiNGM4MTZhODEtMTA4Zi00ZmFmLTk5M2UtY2UwNGRlMzgyYmZhIiwicHVpZCI6IjEwMDMyMDAwNDA0QzE0MEUiLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJTeEV1Z1l2VHVFdHZoMU5ETDVDaDJQemRFM3JKZkhoZTN6UE9XZVFWLThjIiwidGVuYW50X3JlZ2lvbl9zY29wZSI6Ik5BIiwidGlkIjoiMzBjYzMyYTQtMjAwYi00MjJiLWI3NzktMzhlNDliYThkZjRlIiwidW5pcXVlX25hbWUiOiJFLkNhc3NlYW5vQGY1LmNvbSIsInV0aSI6ImtCbmpwcExlRDBXZ29rU1Q1VTI4QUEiLCJ2ZXIiOiIxLjAifQ.imCSRBJTc3B6YKxaxLVdpqgHHgSgBfFg_TKMiJVa4OzcNiEjxX_WqKi13Mrc9CwqJv9lbaxc5143UPdMM9xyR-aeqCX6FwsLLBv2XblIHptPyTN9_-KcdH0v_63FcVG5HkGA48XG_fXALjDk-nMrA7m41YWUJawGqABHH1Qb-pWMZPKBI6qtv_IKPe_xMClXKK1Etro4Yc6ChbJ1YVmv00sMt0mMUcUNhlrZ-tiwK7iy46K6gW-ZwGR7K6R1Yyx1Xu1GuuC88oiDSfhU8xWowwgkBPS0Cck6FtdtsmaUPLO4J_wdPVxRHIX8szw_PUomvn3tnCEXja4tZuQeWMIlmQ",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "51dd8b39dcdb475a9dfd86ae140ab755"
+					},
+					{
+						"key": "Host",
+						"value": "latam-api-instance-05.azure-api.net",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://apm-gw-04.centralus.cloudapp.azure.com:3000/full_book_catalogs/1",
+					"protocol": "https",
+					"host": [
+						"apm-gw-04",
+						"centralus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"full_book_catalogs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bookstore - Get Book Count [API Proxied]",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCIsImtpZCI6IkhCeGw5bUFlNmd4YXZDa2NvT1UyVEhzRE5hMCJ9.eyJhdWQiOiIwMDAwMDAwMi0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC8zMGNjMzJhNC0yMDBiLTQyMmItYjc3OS0zOGU0OWJhOGRmNGUvIiwiaWF0IjoxNTU4NDU1NTI2LCJuYmYiOjE1NTg0NTU1MjYsImV4cCI6MTU1ODQ1OTQyNiwiYWNyIjoiMSIsImFpbyI6IkFVUUF1LzhMQUFBQTVkSURsTnFjRzBVWStMZ0NWZmxmNkQwL1RQcWYzaWI3MS9xWVVvYjN1OUo5OGJxcTkwMjhnL2RZZUZxK09jY3NNdU1mRmhEUHF2Y3hIM1NhZTdpS3FBPT0iLCJhbHRzZWNpZCI6IjU6OjEwMDMwMDAwOEQwMTc4NjciLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiMWQ5M2M4YjUtYzAzZi00MDgyLTgyODItYTJlN2U4ZDkxY2Q3IiwiYXBwaWRhY3IiOiIxIiwiZW1haWwiOiJFLkNhc3NlYW5vQGY1LmNvbSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2RkM2RmZDJmLTZhM2ItNDBkMS05YmUwLWJmODMyN2Q4MWM1MC8iLCJpcGFkZHIiOiIyMDEuMjE3LjIyMy4zNCIsIm5hbWUiOiJFZHVhcmRvIENhc3NlYW5vIiwib2lkIjoiNGM4MTZhODEtMTA4Zi00ZmFmLTk5M2UtY2UwNGRlMzgyYmZhIiwicHVpZCI6IjEwMDMyMDAwNDA0QzE0MEUiLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJTeEV1Z1l2VHVFdHZoMU5ETDVDaDJQemRFM3JKZkhoZTN6UE9XZVFWLThjIiwidGVuYW50X3JlZ2lvbl9zY29wZSI6Ik5BIiwidGlkIjoiMzBjYzMyYTQtMjAwYi00MjJiLWI3NzktMzhlNDliYThkZjRlIiwidW5pcXVlX25hbWUiOiJFLkNhc3NlYW5vQGY1LmNvbSIsInV0aSI6ImtCbmpwcExlRDBXZ29rU1Q1VTI4QUEiLCJ2ZXIiOiIxLjAifQ.imCSRBJTc3B6YKxaxLVdpqgHHgSgBfFg_TKMiJVa4OzcNiEjxX_WqKi13Mrc9CwqJv9lbaxc5143UPdMM9xyR-aeqCX6FwsLLBv2XblIHptPyTN9_-KcdH0v_63FcVG5HkGA48XG_fXALjDk-nMrA7m41YWUJawGqABHH1Qb-pWMZPKBI6qtv_IKPe_xMClXKK1Etro4Yc6ChbJ1YVmv00sMt0mMUcUNhlrZ-tiwK7iy46K6gW-ZwGR7K6R1Yyx1Xu1GuuC88oiDSfhU8xWowwgkBPS0Cck6FtdtsmaUPLO4J_wdPVxRHIX8szw_PUomvn3tnCEXja4tZuQeWMIlmQ",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "51dd8b39dcdb475a9dfd86ae140ab755"
+					},
+					{
+						"key": "Host",
+						"type": "text",
+						"value": "latam-api-instance-05.azure-api.net"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://apm-gw-04.centralus.cloudapp.azure.com:3000/full_book_catalogs/1/exists",
+					"protocol": "https",
+					"host": [
+						"apm-gw-04",
+						"centralus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"full_book_catalogs",
+						"1",
+						"exists"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "https://apimgmtst0xjkanrdu0xetdw.blob.core.windows.net/apiinspectorcontainer/NT3I0f3Q6EZ4y41J8Goa-g2-12?sv=2017-04-17&sr=b&sig=GItqlQTwI%2Fr58ajzatqcbqy74prUcGqxKc6wDw1QIjE%3D&se=2019-05-02T02%3A03%3A04Z&sp=r&traceId=a95f52136b5d429d9b096ba9b8d9b258",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "ocp-apim-trace-location",
+				"type": "string"
+			}
+		]
+	}
+}
