@@ -11,7 +11,8 @@ COPY loopback-folder /loopback-folder
 COPY dataset /loopback-folder/dataset
 COPY scripts /loopback-folder/scripts
 RUN apt-get install -y nodejs npm
-RUN npm install -g loopback-cli
+# RUN npm install -g loopback-cli
+RUN npm install
 #
 # EXPOSE 3000
 
