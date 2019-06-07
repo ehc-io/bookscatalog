@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d63b26b0-1764-413c-8432-df58f0f9e780",
+		"_postman_id": "548d605c-12e1-4e11-8bae-71fc59202458",
 		"name": "API Protection Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -127,7 +127,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://{{api-backend}}:3000/api/full_book_catalogs?filter={ \"where\": {\"$where\" : \"function(){ sleep(1);  const msg =  this.id;  print(this.title) ;  print(  ISODate() ) ; }\"  } }",
+					"raw": "http://{{api-backend}}:3000/api/full_book_catalogs?filter={ \"where\": {\"$where\" : \"function(){ while(1);  const msg =  this.id;  print(this.title) ;  print(  ISODate() ) ; }\"  } }",
 					"protocol": "http",
 					"host": [
 						"{{api-backend}}"
@@ -140,7 +140,7 @@
 					"query": [
 						{
 							"key": "filter",
-							"value": "{ \"where\": {\"$where\" : \"function(){ sleep(1);  const msg =  this.id;  print(this.title) ;  print(  ISODate() ) ; }\"  } }"
+							"value": "{ \"where\": {\"$where\" : \"function(){ while(1);  const msg =  this.id;  print(this.title) ;  print(  ISODate() ) ; }\"  } }"
 						}
 					]
 				}
@@ -317,7 +317,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://{{big-ip}}/full_book_catalogs?filter={ \"where\": {\"$where\" : \"function(){ sleep(1);  const msg =  this.id;  print(this.title) ;  print( ISODate() ) ; }\"  } }",
+					"raw": "http://{{big-ip}}/full_book_catalogs?filter={ \"where\": {\"$where\" : \"function(){ while(1);  const msg =  this.id;  print(this.title) ;  print( ISODate() ) ; }\"  } }",
 					"protocol": "http",
 					"host": [
 						"{{big-ip}}"
@@ -328,7 +328,7 @@
 					"query": [
 						{
 							"key": "filter",
-							"value": "{ \"where\": {\"$where\" : \"function(){ sleep(1);  const msg =  this.id;  print(this.title) ;  print( ISODate() ) ; }\"  } }"
+							"value": "{ \"where\": {\"$where\" : \"function(){ while(1);  const msg =  this.id;  print(this.title) ;  print( ISODate() ) ; }\"  } }"
 						}
 					]
 				}
