@@ -20,7 +20,7 @@
     "loopback-datasource-juggler": "^2.19.0",
     "loopback-component-explorer": "^5.4.0",
     "loopback-connector-mongodb": "<=3.5.x",
-    "loopback": "<=2.17.0"
+    "loopback": "<=3.28.0"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
